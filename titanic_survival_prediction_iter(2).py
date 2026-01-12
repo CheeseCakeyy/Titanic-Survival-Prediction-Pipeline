@@ -13,7 +13,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score,StratifiedKFold
 
 
-train_path = "C:/Users/Adwait Tagalpallewar/Desktop/datasets/titanic/train.csv"
+train_path = "data/train.csv"
 train_df = pd.read_csv(train_path)
 
 print(train_df.head())
@@ -126,7 +126,7 @@ print('CV mean_score,std across 5 folds: ', score.mean(), score.std()) # 0.81146
 #-------------------
 '''Submission CSV-1 iter(2)'''
 #-------------------
-test_path = "C:/Users/Adwait Tagalpallewar/Desktop/datasets/titanic/test.csv"
+test_path = "data/test.csv"
 test_df = pd.read_csv(test_path)
 
 X_test = feature_creation(test_df)
@@ -157,4 +157,5 @@ submission.to_csv("Submission1_iter(2).csv",index=False) #0.77990; rank =4317/13
 '''Reached the ceiling of logistic regression on the given set of features, for further gain
 we'll have to introduce interaction features since the model isnt able to capture non linear interactions between features 
 It will be time consuming to produce new features, so iteration 3 will cover comparision with tree based models which 
+
 capture non linear interaction '''
