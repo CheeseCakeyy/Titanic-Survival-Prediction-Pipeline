@@ -16,7 +16,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score,precision_score,recall_score,confusion_matrix
 
 
-train_path = "C:/Users/Adwait Tagalpallewar/Desktop/datasets/titanic/train.csv"
+train_path = "data/train.csv"
 df = pd.read_csv(train_path)
 
 print(df.head())
@@ -299,7 +299,7 @@ indicating that the gain was split-dependent rather than a robust generalization
 #-------------------
 '''Submission CSV-1'''
 #-------------------
-test_path = "C:/Users/Adwait Tagalpallewar/Desktop/datasets/titanic/test.csv"
+test_path = "data/test.csv"
 test_df = pd.read_csv(test_path)
 
 print(test_df.head())
@@ -335,5 +335,6 @@ submission.to_csv("Submission1_iter(1).csv",index=False) #0.7511;rank=12000/1380
 '''Although cross-validation accuracy was approximately 80%, the initial Kaggle submission achieved 75% accuracy. 
 This gap is expected due to distributional differences between the training data and Kaggle’s hidden test set, 
 as well as the absence of domain-specific feature engineering such as title extraction and family-based features.'''
+
 
 '''Iteration 2 will cover domain specific feature extraction and we'll compare a tunedd nonlinear model to see if that gets us anywhere'''
