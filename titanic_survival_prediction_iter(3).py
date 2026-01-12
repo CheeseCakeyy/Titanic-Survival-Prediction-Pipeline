@@ -13,7 +13,7 @@ from sklearn.model_selection import StratifiedKFold,cross_val_score
 
 
 
-train_path = "C:/Users/Adwait Tagalpallewar/Desktop/datasets/titanic/train.csv"
+train_path = "data/train.csv"
 train_df = pd.read_csv(train_path)
 
 print(train_df.head())
@@ -157,7 +157,7 @@ plt.show() #for max_depth=8:  0.835019772770071 0.009066153473789296
 #-------------------
 '''Submission CSV-1 iter(3)'''
 #-------------------
-test_path = "C:/Users/Adwait Tagalpallewar/Desktop/datasets/titanic/test.csv"
+test_path = "data/titanic/test.csv"
 test_df = pd.read_csv(test_path)
 
 X_test = feature_creation(test_df)
@@ -187,4 +187,5 @@ submission = pd.DataFrame({
 submission.to_csv("Submission1_iter(3).csv",index=False) #0.78708, heigher than that of iter(2) results
 
 '''Title was a high-variance feature that RF (the final virdict is written in iter(4)) 
+
 Iteration 4 will cover trial of xgboost to see if it can perform better'''
