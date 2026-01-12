@@ -184,8 +184,9 @@ submission = pd.DataFrame({
     "Survived" : y_pred
 })
 
-submission.to_csv("Submission1_iter(3).csv",index=False) #0.78708, heigher than that of iter(2) results
+submission.to_csv("Submission1_iter(3).csv",index=False) #0.78708, heigher than that of iter(2) results after removal of 'Title'
 
 '''Title was a high-variance feature that RF (the final virdict is written in iter(4)) 
 
 Iteration 4 will cover trial of xgboost to see if it can perform better'''
+
