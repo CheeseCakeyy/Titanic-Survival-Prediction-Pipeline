@@ -5,7 +5,7 @@ Predicting survival on the Titanic using structured machine learning and princip
 
 ---
 
-## 🚢 Project Overview
+##  Project Overview
 
 This project focuses on building a **clean, well-evaluated machine learning pipeline** for the Kaggle *Titanic: Machine Learning from Disaster* competition.  
 Rather than leaderboard chasing, the emphasis is on:
@@ -18,7 +18,7 @@ Rather than leaderboard chasing, the emphasis is on:
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 .
@@ -33,7 +33,6 @@ Rather than leaderboard chasing, the emphasis is on:
 ├── Submission1_iter(3).csv
 ├── Submission1_iter(4).csv
 ├── Submission1_iter(5).csv
-├── requirements.txt
 └── README.md
 ```
 
@@ -41,7 +40,7 @@ Each iteration represents a **conceptual improvement**, not random tuning.
 
 ---
 
-## 🧠 Methodology
+##  Methodology
 
 ### 1. Data Preprocessing & Feature Engineering
 - Handled missing values using median/mode strategies
@@ -82,13 +81,13 @@ This avoids leaderboard overfitting and preserves generalization integrity.
 
 ---
 
-## 📊 Results
+##  Results
 
-| Model | Validation F1 |
-|------|---------------|
-| Logistic Regression | ~0.738 |
-| Random Forest | ~0.732 |
-| XGBoost | ~0.701 |
+| Model | Validation F1 | Validation/CV Accuracy
+|------|---------------|--------------------|
+| Logistic Regression | ~0.738 | 81.1
+| Random Forest | ~0.732 | 83.5
+| XGBoost | ~0.701 | 82.8
 
 The final ensemble slightly outperformed the strongest individual model.
 
@@ -96,7 +95,7 @@ A ~3.6% accuracy improvement resulted in a leaderboard jump from ~12,000 to ~2,0
 
 ---
 
-## ⭐ Key Learnings
+##  Key Learnings
 
 - Small datasets can produce misleading validation confidence
 - Feature engineering often matters more than model complexity
@@ -105,26 +104,11 @@ A ~3.6% accuracy improvement resulted in a leaderboard jump from ~12,000 to ~2,0
 
 ---
 
-## 🧪 How to Run
 
-```bash
-git clone https://github.com/CheeseCakeyy/Titanic-Survival-Prediction-Pipeline.git
-cd Titanic-Survival-Prediction-Pipeline
-pip install -r requirements.txt
-python titanic_survival_prediction_iter(5).py
-```
+##  Future Work
 
----
-
-## 🚀 Future Work
-
-- Robust cross-validation (Stratified K-Fold)
 - Feature stability analysis
-- Model explainability (SHAP)
 - Neural networks for learning-based representations
 
 ---
 
-## 📜 License
-
-MIT License
